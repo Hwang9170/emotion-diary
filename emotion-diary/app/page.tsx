@@ -7,10 +7,10 @@ import { useState } from 'react';
 export default function DiaryPage() {
   const [emotion, setEmotion] = useState('😊 행복'); // 감정 결과 예시
   const [diaryText, setDiaryText] = useState('');
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDiaryText(e.target.value);
   };
-
+  
   const handleSubmit = () => {
     // 여기서 서버에 저장하거나 로컬 저장 처리 가능
     alert('일기가 저장되었어요!');
